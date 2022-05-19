@@ -228,6 +228,11 @@ List of keybindings (SPC h b b)")
 (use-package emojify
   :hook (after-init . global-emojify-mode))
 
+(use-package nyan-mode)
+(nyan-mode)
+(nyan-start-animation)
+(nyan-toggle-wavy-trail)
+
 (map! :leader
       (:prefix ("e". "evaluate/EWW")
        :desc "Evaluate elisp in buffer" "b" #'eval-buffer

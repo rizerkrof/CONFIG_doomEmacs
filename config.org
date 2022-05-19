@@ -26,6 +26,7 @@
 - [[#elfeed][ELFEED]]
 - [[#emms][EMMS]]
 - [[#emojis][EMOJIS]]
+- [[#nyan-mode][NYAN MODE]]
 - [[#evaluate-elisp-expressions][EVALUATE ELISP EXPRESSIONS]]
 - [[#eww][EWW]]
 - [[#fonts][FONTS]]
@@ -471,6 +472,14 @@ Emojify is an Emacs extension to display emojis. It can display github style emo
   :hook (after-init . global-emojify-mode))
 #+end_src
 
+* NYAN MODE
+Nyan mode shows you your buffer position in mode line. You can click on nyan cat to switch to corresponding position in current selected buffer.
+#+BEGIN_SRC emacs-lisp
+(use-package nyan-mode)
+(nyan-mode)
+(nyan-start-animation)
+(nyan-toggle-wavy-trail)
+#+END_SRC
 * EVALUATE ELISP EXPRESSIONS
 Changing some keybindings from their defaults to better fit with Doom Emacs, and to avoid conflicts with my window managers which sometimes use the control key in their keybindings.  By default, Doom Emacs does not use 'SPC e' for anything, so I choose to use the format 'SPC e' plus 'key' for these (I also use 'SPC e' for 'eww' keybindings).
 
