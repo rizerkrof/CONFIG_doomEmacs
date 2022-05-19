@@ -1,0 +1,39 @@
+#+TITLE:   README
+#+DATE:    mai 19, 2022
+#+STARTUP: inlineimages nofold
+
+* Table of Contents :TOC_3:noexport:
+- [[#description][Description]]
+  - [[#maintainers][Maintainers]]
+- [[#features][Features]]
+- [[#configuration][Configuration]]
+- [[#troubleshooting][Troubleshooting]]
+
+* Description
+This repository hosts my doom emacs configuration. This config is mainly inspired from Derek Taylor's (DT) config.
+[[https://www.youtube.com/DistroTube][DT's YouTube]]
+[[https://gitlab.com/dwt1][DT's Gitlab]]
+
+** Maintainers
++ [[https://github.com/rizerkrof][Doudou]]
+
+* Features
+This doom config adds a lot of useful package that makes the emacs experience better. It also allows toggle some interesting features such as:
+- dashboard 🖥
+- Neotree 🌴
+- Nyan mode 🌈
+- Emojis 😻
+- Fancy themes 🌟
+- Calendar 🗓
+- some other cool keybindings ⚙
+- ...
+
+* Configuration
+Clone this repo in your .config file with the following command
+#+BEGIN_SRC shell
+cd ~/.config && git clone https://github.com/rizerkrof/CONFIG_doomEmacs.git && if [ -e doom ]; then mv doom BACKUP_doom; fi && mv CONFIG_doomEmacs doom
+#+END_SRC
+The command will *clone the repo*, set it as the configuration folder and *create a backup* of your previous config. Don't forget to have *git* installed on your system 😉.
+
+* Troubleshooting
+Do not hesitate to send me message if you have any troubleshooting with the installation or with the config itself.

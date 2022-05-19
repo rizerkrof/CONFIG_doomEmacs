@@ -228,11 +228,6 @@ List of keybindings (SPC h b b)")
 (use-package emojify
   :hook (after-init . global-emojify-mode))
 
-(use-package nyan-mode)
-(nyan-mode)
-(nyan-start-animation)
-(nyan-toggle-wavy-trail)
-
 (map! :leader
       (:prefix ("e". "evaluate/EWW")
        :desc "Evaluate elisp in buffer" "b" #'eval-buffer
@@ -331,6 +326,11 @@ List of keybindings (SPC h b b)")
 (map! :leader
       :desc "Toggle neotree file viewer" "t n" #'neotree-toggle
       :desc "Open directory in neotree" "d n" #'neotree-dir)
+
+(use-package nyan-mode)
+(nyan-mode)
+(nyan-start-animation)
+(nyan-toggle-wavy-trail)
 
 (map! :leader
       (:prefix ("=" . "open file")
