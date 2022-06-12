@@ -5,6 +5,7 @@
 * Table of Contents :TOC_3:noexport:
 - [[#description][Description]]
   - [[#maintainers][Maintainers]]
+- [[#prerequisites][Prerequisites]]
 - [[#features][Features]]
 - [[#configuration][Configuration]]
 - [[#troubleshooting][Troubleshooting]]
@@ -13,9 +14,22 @@
 This repository hosts my doom emacs configuration. This config is mainly inspired from Derek Taylor's (DT) config.
 [[https://www.youtube.com/DistroTube][DT's YouTube]]
 [[https://gitlab.com/dwt1][DT's Gitlab]]
-
+This is only the configuration files. You first need to install Doom emacs (see prerequisites section).
 ** Maintainers
 + [[https://github.com/rizerkrof][Doudou]]
+
+* Prerequisites
+You need to have Doom Emacs installed. See [[https://github.com/doomemacs/doomemacs][documentation here]].
+Cheat sheet for ubuntu 20.04:
+1) Install Emacs
+   #+BEGIN_SRC shell
+sudo apt install emacs-gtk ripgrep
+   #+END_SRC
+2) Install Doom Emacs
+   #+BEGIN_SRC shell
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+   #+END_SRC
 
 * Features
 This doom config adds a lot of useful package that makes the emacs experience better. It also allows toggle some interesting features such as:
