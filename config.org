@@ -942,9 +942,11 @@ Perspective provides multiple named workspaces (or "perspectives") in Emacs, sim
 Rainbox mode displays the actual color for any hex value color.  It's such a nice feature that I wanted it turned on all the time, regardless of what mode I am in.  The following creates a global minor mode for rainbow-mode and enables it.
 
 #+begin_src emacs-lisp
-(define-globalized-minor-mode global-rainbow-mode rainbow-mode
-  (lambda () (rainbow-mode 1)))
-(global-rainbow-mode 1 )
+;; (define-globalized-minor-mode global-rainbow-mode rainbow-mode
+;;   (lambda () (rainbow-mode 1)))
+;; (global-rainbow-mode 1 )
+(use-package rainbow-mode
+  :hook (prog-mode . rainbow-mode ))
 #+end_src
 
 * REGISTERS
