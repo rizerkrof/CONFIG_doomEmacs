@@ -346,8 +346,8 @@ List of keybindings (SPC h b b)")
 (map! :leader
       :desc "Org babel tangle" "m B" #'org-babel-tangle)
 (after! org
-  (setq org-directory "~/nc/Org/"
-        org-agenda-files '("~/nc/Org/agenda.org")
+  (setq org-directory "~/Documents/Org/"
+        org-agenda-files '("~/Documents/agendas")
         org-default-notes-file (expand-file-name "notes.org" org-directory)
         org-ellipsis " ▼ "
         org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
@@ -391,115 +391,6 @@ List of keybindings (SPC h b b)")
       org-journal-date-format "%B %d, %Y (%A) "
       org-journal-file-format "%Y-%m-%d.org")
 
-(setq org-publish-use-timestamps-flag nil)
-(setq org-export-with-broken-links t)
-(setq org-publish-project-alist
-      '(("distro.tube without manpages"
-         :base-directory "~/nc/gitlab-repos/distro.tube/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/"
-         :recursive t
-         :exclude "org-html-themes/.*\\|man-org/man*"
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man0p"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man0p/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man0p/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man1"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man1/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man1/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man1p"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man1p/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man1p/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man2"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man2/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man2/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man3"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man3/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man3/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man3p"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man3p/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man3p/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man4"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man4/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man4/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man5"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man5/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man5/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man6"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man6/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man6/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man7"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man7/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man7/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("man8"
-         :base-directory "~/nc/gitlab-repos/distro.tube/man-org/man8/"
-         :base-extension "org"
-         :publishing-directory "~/nc/gitlab-repos/distro.tube/html/man-org/man8/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4             ; Just the default for this project.
-         :auto-preamble t)
-         ("org-static"
-         :base-directory "~/Org/website"
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/public_html/"
-         :recursive t
-         :exclude ".*/org-html-themes/.*"
-         :publishing-function org-publish-attachment)
-      ))
-
 (after! org-roam
   (setq org-roam-directory "~/nc/Roam"))
 
@@ -513,9 +404,11 @@ List of keybindings (SPC h b b)")
       :desc "Add a buffer current perspective" "+" #'persp-add-buffer
       :desc "Remove perspective by name" "-" #'persp-remove-by-name)
 
-(define-globalized-minor-mode global-rainbow-mode rainbow-mode
-  (lambda () (rainbow-mode 1)))
-(global-rainbow-mode 1 )
+;; (define-globalized-minor-mode global-rainbow-mode rainbow-mode
+;;   (lambda () (rainbow-mode 1)))
+;; (global-rainbow-mode 1 )
+(use-package rainbow-mode
+  :hook (prog-mode . rainbow-mode ))
 
 (map! :leader
       (:prefix ("r" . "registers")
