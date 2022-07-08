@@ -374,6 +374,15 @@ List of keybindings (SPC h b b)")
              "DONE(d)"           ; Task has been completed
              "CANCELLED(c)" )))) ; Task has been cancelled
 
+(use-package! org-habit
+  :after org
+  :config
+  (setq org-habit-following-days 5
+        ;; org-habit-graph-column 1
+        org-habit-show-all-today t
+        ;; org-habit-preceding-days 7
+        org-habit-show-habits t)  )
+
 (custom-set-faces
   '(org-level-1 ((t (:inherit outline-1 :height 1.4))))
   '(org-level-2 ((t (:inherit outline-2 :height 1.3))))
